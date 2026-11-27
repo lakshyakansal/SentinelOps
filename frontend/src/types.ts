@@ -1,0 +1,1 @@
+export type Incident={id:number;serviceName:string;environment:string;severity:string;status:string;title:string;rawLogs?:string;rootCause?:string;recommendations?:string;aiConfidence?:string;createdAt:string;updatedAt:string}
