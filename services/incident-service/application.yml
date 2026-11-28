@@ -1,0 +1,16 @@
+server:
+  port: 8082
+spring:
+  application.name: incident-service
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/sentinelops}
+    username: ${DB_USER:sentinel}
+    password: ${DB_PASSWORD:change_me_local_only}
+  jpa:
+    hibernate.ddl-auto: validate
+    open-in-view: false
+management:
+  endpoints.web.exposure.include: health,info,prometheus
+sentinelops:
+  ai-url: ${AI_SERVICE_URL:http://localhost:8000}
+  notification-url: ${NOTIFICATION_SERVICE_URL:http://localhost:8083}
